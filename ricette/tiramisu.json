@@ -2,6 +2,8 @@
   "titolo": "Tiramisù",
   "tipologia": "dolce",
   "porzioni": 6,
+  "storia": "Due città se lo contendono con documenti alla mano. Treviso lo attribuisce al ristorante Le Beccherie, che lo avrebbe codificato negli anni Sessanta; Tolmezzo, in Friuli, rivendica una paternità anteriore. La disputa è arrivata fino ai registri regionali dei prodotti tradizionali, senza un verdetto che accontenti tutti. Quello su cui non si discute è che sia un dolce recente, del secondo Novecento, nonostante l'aria da ricetta della nonna.",
+  "urlImmagine": "https://placehold.co/600x400/6f4e37/f5f0e6?text=Tiramisu",
   "ingredienti": [
     {
       "nome": "Savoiardi",

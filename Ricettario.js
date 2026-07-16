@@ -18,8 +18,10 @@
  * @property {string} titolo - Titolo della ricetta
  * @property {string} tipologia - Tipologia della ricetta
  * @property {number} porzioni - Numero di porzioni della ricetta
+ * @property {string} storia - Storia della ricetta
  * @property {Ingrediente[]} ingredienti - Lista degli ingredienti della ricetta
  * @property {string[]} steps - Lista dei passaggi della ricetta
+ * @property {string} urlImmagine - URL dell'immagine della ricetta
  */
 
 /**
@@ -45,15 +47,6 @@ async function loadRicettario() {
 /** @type {Ricetta[]} */
 let ricettario = [];
 
-async function main() {
-    try {
-        ricettario = await loadRicettario();
-        console.log(ricettario);
-    } catch (error) {
-        console.error('Errore durante il caricamento del ricettario:', error);
-    }
-}
-
 const messaggio = document.querySelector("#messaggio");
 const form = document.querySelector("#newsletterForm");
 
@@ -68,108 +61,6 @@ form.addEventListener("submit", function (event) {
     messaggio.classList.remove("nascosto");
 });
 
-/************************************ LISTA PRIMI *************************************/
-//tasto fisico che serve per vedere i primi
-const tastoPrimi = document.getElementById('primi');
-
-//listaPrimi corrisponde al contenitore fisico che abbiamo sull'html
-const listaPrimi = document.getElementById('listaPrimi');
-
-tastoPrimi.addEventListener('click', function (evento) {
-
-    // Se lista visibile e piena allora viene svuotata e nascosta
-    if (listaPrimi.children.length > 0) {
-        listaPrimi.innerHTML = '';
-        return;
-    }
-
-    //ricetta = oggetto di quella ricetta, es: oggetto carbonara
-    //se tipologia = primo viene tenuto
-    //soloPrimi è un array che conterrà tutti gli oggetti ricetta che sono dei primi
-    const soloPrimi = ricettario.filter(ricetta => ricetta.tipologia === "primo");
-
-
-    //scorro le ricette in soloPrimi 
-    //per ognuna creo un elemento fisico nell'html (li) e mostro solo il titolo 
-    soloPrimi.forEach(ricetta => {
-        const nuovoLi = document.createElement('li');
-        nuovoLi.textContent = ricetta.titolo;
-
-        // Rendi il piatto cliccabile con la manina
-        nuovoLi.style.cursor = "pointer";
-
-        // Al click mostra i dettagli
-        nuovoLi.addEventListener('click', function (evento) {
-            evento.stopPropagation(); // Evita che si chiuda il menu a tendina
-            mostraDettagliRicetta(ricetta); // Chiama la funzione sopra!
-        });
-
-        listaPrimi.appendChild(nuovoLi);
-    });
-});
-
-/************************************ LISTA SECONDI *************************************/
-const tastoSecondi = document.getElementById('secondi');
-const listaSecondi = document.getElementById('listaSecondi');
-
-tastoSecondi.addEventListener('click', function (evento) {
-
-    if (listaSecondi.children.length > 0) {
-        listaSecondi.innerHTML = '';
-        return;
-    }
-   
-    const soloSecondi = ricettario.filter(ricetta => ricetta.tipologia === "secondo");
-
-    soloSecondi.forEach(ricetta => {
-        const nuovoLi = document.createElement('li');
-        nuovoLi.textContent = ricetta.titolo;
-        listaSecondi.appendChild(nuovoLi);
-    });
-});
-
-/************************************ LISTA CONTORNI *************************************/
-const tastoContorni = document.getElementById('contorni');
-const listaContorni = document.getElementById('listaContorni');
-
-tastoContorni.addEventListener('click', function (evento) {
-
-    if (listaContorni.children.length > 0) {
-        listaContorni.innerHTML = '';
-        return;
-    }
-
-    const soloContorni = ricettario.filter(ricetta => ricetta.tipologia === "contorno");
-
-    soloContorni.forEach(ricetta => {
-        const nuovoLi = document.createElement('li');
-        nuovoLi.textContent = ricetta.titolo;
-        listaContorni.appendChild(nuovoLi);
-    });
-});
-
-/************************************ LISTA DOLCI *************************************/
-const tastoDolci = document.getElementById('dolci');
-const listaDolci = document.getElementById('listaDolci');
-
-tastoDolci.addEventListener('click', function (evento) {
-
-
-    if (listaDolci.children.length > 0) {
-        listaDolci.innerHTML = '';
-        return;
-    }
-
-    const soloContorni = ricettario.filter(ricetta => ricetta.tipologia === "dolce");
-
-    soloContorni.forEach(ricetta => {
-        const nuovoLi = document.createElement('li');
-        nuovoLi.textContent = ricetta.titolo;
-        listaDolci.appendChild(nuovoLi);
-    });
-});
-
-/******************************* FUNZIONE DETTAGLI RICETTA ***********************/
 function mostraDettagliRicetta(ricetta) {
 
     //scrivo il titolo della ricetta
@@ -189,13 +80,86 @@ function mostraDettagliRicetta(ricetta) {
             listaIngredienti.innerHTML += `- ${ingr.nome}: ${ingr.quantita} ${ingr.unita}<br>`;
         }
     });
-
+    const storia = document.getElementById('contenutoStoria');
+    storia.innerHTML = ''; //svuota testo precedente
+    storia.textContent = ricetta.storia;
     //scrivo il procedimento nel paragrafo (numera passaggi)
     const procedimento = document.getElementById('contenutoProcedimento');
     procedimento.innerHTML = ''; // Svuota testo precedente
     ricetta.steps.forEach((step, indice) => {
         procedimento.innerHTML += `${indice + 1}. ${step}<br><br>`;
     });
+}
+
+function checkContent(titolo) {
+    const titoloRicetta = document.getElementById('titoloRicetta').textContent;
+    if (titoloRicetta === titolo) { return true; }
+        return false;
+}
+
+function svuotaBody() {
+    document.getElementById('titoloRicetta').textContent = '';
+    document.getElementById('contenutoPorzioni').textContent = '';
+    document.getElementById('contenutoIngredienti').innerHTML = '';
+    document.getElementById('contenutoStoria').textContent = '';
+    document.getElementById('contenutoProcedimento').innerHTML = '';
+
+}
+
+function clickOnMenu(tipologia) {
+    const tasto = document.getElementById(tipologia); // primi, secondi...
+    const lista = document.getElementById(`lista${tipologia.charAt(0).toUpperCase() + tipologia.slice(1)}`); // listaPrimi, listaSecondi...
+    tasto.addEventListener('click', function (evento) {
+        // Se lista visibile e piena allora viene svuotata e nascosta
+        if (lista.children.length > 0) {
+            lista.innerHTML = '';
+            return;
+        }
+
+        //ricetta = oggetto di quella ricetta, es: oggetto carbonara
+        //se tipologia = primo viene tenuto
+        //soloPrimi è un array che conterrà tutti gli oggetti ricetta che sono dei primi
+        const soloTipologia = ricettario.filter(ricetta => ricetta.tipologia === tipologia);
+
+
+        //scorro le ricette in soloPrimi 
+        //per ognuna creo un elemento fisico nell'html (li) e mostro solo il titolo 
+        soloTipologia.forEach(ricetta => {
+            const nuovoLi = document.createElement('li');
+            nuovoLi.textContent = ricetta.titolo;
+
+            // Rendi il piatto cliccabile con la manina
+            nuovoLi.style.cursor = "pointer";
+
+            // Al click mostra i dettagli
+            nuovoLi.addEventListener('click', function (evento) {
+                if (checkContent(ricetta.titolo)) {
+                    // Fai qualcosa se il contenuto è già mostrato
+                    svuotaBody(); // Svuota il contenuto della ricetta
+                }
+                else {
+                    evento.stopPropagation(); // Evita che si chiuda il menu a tendina
+                    mostraDettagliRicetta(ricetta); // Chiama la funzione sopra!
+                }
+
+            });
+
+            lista.appendChild(nuovoLi);
+        });
+    });
+}
+
+async function main() {
+    try {
+        ricettario = await loadRicettario();
+        console.log(ricettario);
+    } catch (error) {
+        console.error('Errore durante il caricamento del ricettario:', error);
+    }
+    clickOnMenu('primo');
+    clickOnMenu('secondo');
+    clickOnMenu('contorno');
+    clickOnMenu('dolce');
 }
 
 main();

@@ -2,6 +2,8 @@
   "titolo": "Patate al Forno Croccanti",
   "tipologia": "contorno",
   "porzioni": 4,
+  "storia": "Non c'è una vera storia dietro le patate al forno: è un contorno senza patria, che esiste ovunque ci siano un tubero e un forno. L'unica cosa che vale la pena raccontare è la tecnica. La sbollentatura iniziale non serve a precuocere, serve a gelatinizzare l'amido in superficie e a sfaldare leggermente gli spigoli: quelle microscopiche irregolarità sono ciò che in forno diventa crosta. Saltare quel passaggio dà patate cotte, non patate croccanti.",
+  "urlImmagine": "https://placehold.co/600x400/e8c07d/5c3d2e?text=Patate+al+Forno",
   "ingredienti": [
     {
       "nome": "Patate",

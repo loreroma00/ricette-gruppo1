@@ -2,6 +2,8 @@
   "titolo": "Spaghetti Aglio, Olio e Peperoncino",
   "tipologia": "primo",
   "porzioni": 2,
+  "storia": "Napoletana di nascita, è conosciuta anche come «spaghetti a mezzanotte»: il piatto che si fa quando gli ospiti restano oltre l'ora e in dispensa non c'è più niente. Tutti gli ingredienti sono roba che c'è sempre, e questo è il punto.",
+  "urlImmagine": "https://placehold.co/600x400/c1440e/ffe8d6?text=Aglio+e+Olio",
   "ingredienti": [
     {
       "nome": "Spaghetti",
