@@ -1,0 +1,28 @@
+{
+  "titolo": "Cacio e Pepe",
+  "tipologia": "primo",
+  "porzioni": 2,
+  "ingredienti": [
+    {
+      "nome": "Tonnarelli",
+      "quantita": 200,
+      "unita": "g"
+    },
+    {
+      "nome": "Pecorino Romano",
+      "quantita": 120,
+      "unita": "g"
+    },
+    {
+      "nome": "Pepe nero in grani",
+      "quantita": 8,
+      "unita": "g"
+    }
+  ],
+  "steps": [
+    "Tostare i grani di pepe in padella a fuoco basso, poi pestarli grossolanamente.",
+    "Cuocere i tonnarelli in poca acqua, così da concentrare l'amido.",
+    "Grattugiare il pecorino finissimo e stemperarlo con acqua di cottura tiepida, non bollente.",
+    "Mantecare la pasta con la crema di pecorino fuori dal fuoco, aggiungendo il pepe."
+  ]
+}

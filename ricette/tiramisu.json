@@ -1,0 +1,46 @@
+{
+  "titolo": "Tiramisù",
+  "tipologia": "dolce",
+  "porzioni": 6,
+  "ingredienti": [
+    {
+      "nome": "Savoiardi",
+      "quantita": 300,
+      "unita": "g"
+    },
+    {
+      "nome": "Mascarpone",
+      "quantita": 500,
+      "unita": "g"
+    },
+    {
+      "nome": "Uova",
+      "quantita": 4,
+      "unita": "pz"
+    },
+    {
+      "nome": "Zucchero",
+      "quantita": 100,
+      "unita": "g"
+    },
+    {
+      "nome": "Caffè espresso",
+      "quantita": 300,
+      "unita": "ml"
+    },
+    {
+      "nome": "Cacao amaro",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Preparare il caffè e lasciarlo raffreddare completamente.",
+    "Montare i tuorli con lo zucchero fino a ottenere un composto chiaro e spumoso.",
+    "Incorporare il mascarpone poco alla volta, mescolando dal basso verso l'alto.",
+    "Montare gli albumi a neve ferma e unirli delicatamente alla crema.",
+    "Inzuppare velocemente i savoiardi nel caffè: devono bagnarsi, non affogare.",
+    "Alternare strati di crema e savoiardi, terminando con la crema.",
+    "Spolverare di cacao amaro e riporre in frigo per almeno 4 ore."
+  ]
+}

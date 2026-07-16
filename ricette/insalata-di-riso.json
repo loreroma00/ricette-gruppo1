@@ -1,0 +1,59 @@
+{
+  "titolo": "Insalata di Riso",
+  "tipologia": "primo",
+  "porzioni": 4,
+  "ingredienti": [
+    {
+      "nome": "Riso Parboiled",
+      "quantita": 320,
+      "unita": "g"
+    },
+    {
+      "nome": "Tonno sott'olio",
+      "quantita": 160,
+      "unita": "g"
+    },
+    {
+      "nome": "Mozzarella",
+      "quantita": 125,
+      "unita": "g"
+    },
+    {
+      "nome": "Pomodorini",
+      "quantita": 200,
+      "unita": "g"
+    },
+    {
+      "nome": "Olive nere",
+      "quantita": 60,
+      "unita": "g"
+    },
+    {
+      "nome": "Mais",
+      "quantita": 100,
+      "unita": "g"
+    },
+    {
+      "nome": "Uova sode",
+      "quantita": 2,
+      "unita": "pz"
+    },
+    {
+      "nome": "Olio extravergine d'oliva",
+      "quantita": 40,
+      "unita": "ml"
+    },
+    {
+      "nome": "Basilico",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Lessare il riso in abbondante acqua salata, scolarlo al dente e raffreddarlo sotto acqua corrente.",
+    "Condire subito il riso freddo con un filo d'olio, così i chicchi non si attaccano.",
+    "Tagliare mozzarella e pomodorini a cubetti, e le uova sode a spicchi.",
+    "Unire tutti gli ingredienti al riso e mescolare.",
+    "Lasciare riposare in frigo per un'ora prima di servire, completando con basilico fresco."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "titolo": "Patate al Forno Croccanti",
+  "tipologia": "contorno",
+  "porzioni": 4,
+  "ingredienti": [
+    {
+      "nome": "Patate",
+      "quantita": 800,
+      "unita": "g"
+    },
+    {
+      "nome": "Olio extravergine d'oliva",
+      "quantita": 30,
+      "unita": "ml"
+    },
+    {
+      "nome": "Rosmarino",
+      "quantita": 5,
+      "unita": "g"
+    },
+    {
+      "nome": "Aglio",
+      "quantita": 2,
+      "unita": "spicchi"
+    },
+    {
+      "nome": "Sale fino",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Pelare le patate e tagliarle a cubetti di circa 2 cm.",
+    "Sbollentare i cubetti in acqua bollente salata per 5 minuti.",
+    "Scolare le patate e lasciarle asciugare per qualche minuto.",
+    "Preriscaldare il forno a 200°C statico.",
+    "In una teglia, condire le patate con l'olio, gli spicchi d'aglio e il rosmarino.",
+    "Infornare per 30-40 minuti, mescolando a metà cottura, fino a doratura."
+  ]
+}

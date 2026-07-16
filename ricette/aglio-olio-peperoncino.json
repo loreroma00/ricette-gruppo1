@@ -1,0 +1,39 @@
+{
+  "titolo": "Spaghetti Aglio, Olio e Peperoncino",
+  "tipologia": "primo",
+  "porzioni": 2,
+  "ingredienti": [
+    {
+      "nome": "Spaghetti",
+      "quantita": 200,
+      "unita": "g"
+    },
+    {
+      "nome": "Aglio",
+      "quantita": 3,
+      "unita": "spicchi"
+    },
+    {
+      "nome": "Olio extravergine d'oliva",
+      "quantita": 60,
+      "unita": "ml"
+    },
+    {
+      "nome": "Peperoncino fresco",
+      "quantita": 1,
+      "unita": "pz"
+    },
+    {
+      "nome": "Prezzemolo",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Affettare l'aglio a lamelle sottili e tritare il peperoncino.",
+    "Scaldare l'olio a fuoco bassissimo con aglio e peperoncino, senza farli colorire.",
+    "Cuocere gli spaghetti molto al dente.",
+    "Saltare la pasta nel condimento con poca acqua di cottura, mantecando bene.",
+    "Completare con prezzemolo tritato fresco."
+  ]
+}

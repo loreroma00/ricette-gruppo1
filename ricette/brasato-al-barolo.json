@@ -1,0 +1,69 @@
+{
+  "titolo": "Brasato al Barolo",
+  "tipologia": "secondo",
+  "porzioni": 6,
+  "ingredienti": [
+    {
+      "nome": "Cappello del prete",
+      "quantita": 1200,
+      "unita": "g"
+    },
+    {
+      "nome": "Barolo",
+      "quantita": 750,
+      "unita": "ml"
+    },
+    {
+      "nome": "Cipolla",
+      "quantita": 1,
+      "unita": "pz"
+    },
+    {
+      "nome": "Carota",
+      "quantita": 2,
+      "unita": "pz"
+    },
+    {
+      "nome": "Sedano",
+      "quantita": 100,
+      "unita": "g"
+    },
+    {
+      "nome": "Aglio",
+      "quantita": 2,
+      "unita": "spicchi"
+    },
+    {
+      "nome": "Burro",
+      "quantita": 40,
+      "unita": "g"
+    },
+    {
+      "nome": "Alloro",
+      "quantita": 2,
+      "unita": "pz"
+    },
+    {
+      "nome": "Chiodi di garofano",
+      "quantita": 3,
+      "unita": "pz"
+    },
+    {
+      "nome": "Sale grosso",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Legare la carne con lo spago da cucina per mantenerne la forma in cottura.",
+    "Marinare la carne nel Barolo con le verdure a pezzi grossi e gli aromi, per 12 ore in frigo.",
+    "Scolare la carne e asciugarla accuratamente: se è bagnata non si rosola, bolle.",
+    "Filtrare la marinatura tenendo da parte vino e verdure separatamente.",
+    "Rosolare la carne nel burro su tutti i lati fino a formare una crosta scura uniforme.",
+    "Aggiungere le verdure e farle appassire per 10 minuti.",
+    "Bagnare con il vino filtrato e portare a bollore, poi abbassare al minimo.",
+    "Cuocere coperto per circa 3 ore, mantenendo il liquido appena sotto il bollore (<100°C).",
+    "Togliere la carne, frullare il fondo con le verdure e ridurlo alla consistenza desiderata.",
+    "Affettare il brasato a fette spesse un dito e nappare con la salsa."
+  ]
+}
