@@ -1,3 +1,136 @@
-﻿body
-{
+﻿
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+
+:root {
+    /*Palette colori*/
+    --color-bg: #FAF3E9; /* sfondo generale, header, card */
+    --color-primary: #D8722C; /* accento principale: bottoni, link, icone attive */
+    --color-primary-dark: #B85F22; /* hover/active del primario, un po' più scuro */
+    --color-secondary: #7C8C5A; /* verde oliva: badge, dettagli secondari */
+    --color-text: #2B1E14; /* testo principale, marrone scuro quasi nero */
+    --color-text-muted: #6E4A2E; /* testo secondario, placeholder, sottotitoli */
+    --color-border: #E8DAC5; /* bordi leggeri, coerenti con lo sfondo crema */
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Contenitore Principale */
+
+.header-container {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 70px;
+    width: 100%;
+    user-select: none; /* Impedisce la selezione del testo */
+}
+
+h1 {
+    color: var(--color-primary-dark);
+}
+
+/* Sezione Sinistra: Menu + Logo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0; /* IMPEDISCE a questa sezione di allargarsi troppo rubando spazio alla barra */
+}
+
+
+/* Logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    height: 100%; /* Occupa l'altezza disponibile */
+}
+
+.logo-image {
+    max-height: 55px; /* Limita l'altezza massima dell'immagine per non rompere l'header */
+    height: 55px;
+    width: 55px;
+    objective-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+/* Sezione Ricerca */
+.header-search-section {
+    flex-grow: 1; /* FORZA la barra a prendersi TUTTO lo spazio che avanza a destra */
+    flex-basis: 0; /* Imposta la base flessibile a 0 per permettere alla barra di crescere */
+    flex-shrink: 1; /* Permette alla barra di ridursi se lo spazio è limitato */
+    display: flex;
+    align-items: center;
+    max-width: 800px; /*larghezza max*/
+}
+
+
+/* Barra di ricerca statica */
+.search-bar-static {
+    border: 2px solid var(--color-border);
+    border-radius: 30px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.search-bar-static:hover {
+    transform: scale(1.01);
+    background-color: #FDF9F4;
+    border-color: var(--color-primary);
+}
+
+.search-bar-static:focus-within {
+    border-color: var(--color-primary);
+}
+
+.search-icon {
+    color: var(--color-primary);
+    font-size: 20px !important;
+}
+
+/*Pulsante accedi*/
+
+.login-button {
+    flex-shrink: 0;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: scale(1.01);
 }
