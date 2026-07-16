@@ -3,7 +3,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -15,8 +16,8 @@
         <div id="menu">
             <nav class="sidebar">
                 <h2>Ricette</h2>
-                <ul>
-                    <li>
+                <ul id="listaRicette">
+                    <li id="primi">
                         Primi
                         <ul>
                             <li>Primo 1</li>
@@ -25,7 +26,7 @@
                             <li>Primo 4</li>
                         </ul>
                     </li>
-                    <li>
+                    <li id="secondi">
                         Secondi
                         <ul>
                             <li>Secondo 1</li>
@@ -33,7 +34,7 @@
                             <li>Secondo 3</li>
                         </ul>
                     </li>
-                    <li>
+                    <li id="dolci">
                         Dolci
                         <ul>
                             <li>Dolce 1</li>
@@ -46,16 +47,16 @@
         </div>
         <!--Ricetta-->
         <div id="corpo">
-            <h2>Titolo Ricetta</h2>
-            <h3>Ingredienti</h3>
+            <h2 id="titoloRicetta">Titolo Ricetta</h2>
+            <h3 id="ingredienti">Ingredienti</h3>
             <p>
 
             </p>
-            <h3>Storia</h3>
+            <h3 id="storia">Storia</h3>
             <p>
 
             </p>
-            <h3>Procedimento</h3>
+            <h3 id="procedimento">Procedimento</h3>
             <p>
 
             </p>
@@ -63,7 +64,7 @@
     </main>
     <!--Footer-->
     <footer>
-
     </footer>
+    <script src="schedaJSED.js"></script>
 </body>
 </html>
