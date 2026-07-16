@@ -1,3 +1,40 @@
-﻿body
-{
+﻿.nascosto {
+    display: none;
+}
+
+
+.newsletter {
+    display: grid;
+    background-color: #7c8c5a;
+}
+
+.contattiSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8722c;
+}
+
+.contatti {
+    display: grid;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottoneIscrizione {
+    background-color: #faf3e9;
+    color: black;
+    border: black;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#bottoneIscrizione:hover {
+    background-color: #d8722c;
+    color: white;
 }
