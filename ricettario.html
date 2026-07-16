@@ -3,14 +3,41 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font carino -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     <title>Ricettario</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!--Titolo-->
-        <h1>Welcome to my site</h1>
+
+    <header class="header-container">
+        <!--Titolo + Logo - Colonna sinistra-->
+        <div class="header-left">
+            <a href="#" class="logo-link">
+                <img src="Logo.png" alt="Logo Ricette" class="logo-image" />
+            </a>
+            <h1>Ricette della Nonna</h1>
+        </div>
+        <!-- Barra di ricerca - Colonna destra-->
+        <div class="header-search-section">
+            <div class="search-bar-static">
+                <span>Cerca una ricetta</span>
+                <span class="material-symbols-outlined search-icon">search</span>
+            </div>
+        </div>
+        <!-- Qua sto a caca fori dal vaso-->
+        <!--<div class="lang-switcher">
+            <span class="flag flag-en">
+                <img src="ENG.jpg" alt="inglese" class="flag-img" />
+            </span>
+            <span class="flag flag-it">
+                <img src="ITA.jpg" alt="italiano" class="flag-img" />
+        </div>-->
+        <a href="#" class="login-button">Accedi</a>
     </header>
     <main >
         <!--Menu laterale-->

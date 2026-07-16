@@ -1,4 +1,134 @@
-﻿
+﻿:root {
+    /*Palette colori*/
+    --color-bg: #FAF3E9; /* sfondo generale, header, card */
+    --color-primary: #D8722C; /* accento principale: bottoni, link, icone attive */
+    --color-primary-dark: #B85F22; /* hover/active del primario, un po' più scuro */
+    --color-secondary: #7C8C5A; /* verde oliva: badge, dettagli secondari */
+    --color-text: #2B1E14; /* testo principale, marrone scuro quasi nero */
+    --color-text-muted: #6E4A2E; /* testo secondario, placeholder, sottotitoli */
+    --color-border: #E8DAC5; /* bordi leggeri, coerenti con lo sfondo crema */
+}
+
+
+@font-face {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+     /* set name */
+    
+}
+
+/* Contenitore Principale */
+
+.header-container {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    height: 70px;
+    width: 100%;
+    user-select: none; /* Impedisce la selezione del testo */
+}
+
+h1 {
+    color: var(--color-primary-dark);
+}
+
+/* Sezione Sinistra: Menu + Logo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0; /* IMPEDISCE a questa sezione di allargarsi troppo rubando spazio alla barra */
+}
+
+
+/* Logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none; /* Rimuove la sottolineatura del link */
+    height: 100%; /* Occupa l'altezza disponibile */
+}
+
+.logo-image {
+    max-height: 55px; /* Limita l'altezza massima dell'immagine per non rompere l'header */
+    height: 55px;
+    width: 55px;
+    objective-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+/* Sezione Ricerca */
+.header-search-section {
+    flex-grow: 1; /* FORZA la barra a prendersi TUTTO lo spazio che avanza a destra */
+    flex-basis: 0; /* Imposta la base flessibile a 0 per permettere alla barra di crescere */
+    flex-shrink: 1; /* Permette alla barra di ridursi se lo spazio è limitato */
+    display: flex;
+    align-items: center;
+    max-width: 800px; /*larghezza max*/
+}
+
+
+/* Barra di ricerca statica */
+.search-bar-static {
+    border: 2px solid var(--color-border);
+    border-radius: 30px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: var(--color-text-muted);
+    font-size: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+    .search-bar-static:hover {
+        transform: scale(1.01);
+        background-color: #FDF9F4;
+        border-color: var(--color-primary);
+    }
+
+    .search-bar-static:focus-within {
+        border-color: var(--color-primary);
+    }
+
+.search-icon {
+    color: var(--color-primary);
+    font-size: 20px !important;
+}
+
+/*Pulsante accedi*/
+
+.login-button {
+    flex-shrink: 0;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    .login-button:hover {
+        background-color: var(--color-primary-dark);
+        transform: scale(1.01);
+    }
+
+
 
 
 @font-face {
@@ -91,181 +221,6 @@ main {
 
 
 
-﻿ /* ==========================================
-   1. RESET & VARIABILI (Colori e Font)
-   ========================================== 
-    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --bg-color: #faf8f5; /* Sfondo panna caldo, rilassante per gli occhi 
-    --card-bg: #ffffff; /* Sfondo bianco per i blocchi di contenuto 
-    --text-color: #2c3e50; /* Testo scuro ma non nero puro (più elegante) 
-    --accent-color: #e67e22; /* Arancione "food" per dettagli e titoli 
-    --accent-hover: #d35400; /* Arancione più scuro per i passaggi del mouse 
-    --border-color: #f1f1f1; /* Grigio chiarissimo per i divisori 
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* ==========================================
-   2. HEADER & FOOTER
-   ========================================== 
-header {
-    background-color: var(--card-bg);
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid var(--border-color);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-    header h1 {
-        color: var(--accent-color);
-        font-size: 2.2rem;
-        font-weight: 700;
-    }
-
-footer {
-    margin-top: auto;
-    padding: 20px;
-    background-color: var(--text-color);
-    color: white;
-    text-align: center;
-    font-size: 0.9rem;
-}*/
-
-/* ==========================================
-   3. LAYOUT PRINCIPALE (Menu + Corpo)
-   ========================================== 
-main {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    margin: 30px auto;
-    padding: 0 20px;
-    gap: 30px; /* Spazio tra menu e corpo ricetta 
-}
-
-/* ==========================================
-   4. MENU LATERALE (Sidebar)
-   ========================================== */
-/*#menu {
-    flex: 1; /* Prende 1 quota di spazio 
-    min-width: 250px;
-    background-color: var(--card-bg);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    align-self: flex-start;  Evita che si allunghi verticalmente all'infinito */
-}
-/* #menu h2 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-        color: var(--text-color);
-        border-bottom: 2px solid var(--accent-color);
-        padding-bottom: 8px;
-    }*/
-
-
-/* Liste del menu
-    #listaRicette {
-    list-style: none;
-}
-
-     Categorie principali: Primi, Secondi, Dolci 
-#listaRicette > li {
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-top: 15px;
-    font-size: 1.1rem;
-}
-*/
-
-
-    /* Sotto-liste (le singole ricette) 
-    #listaRicette ul {
-        list-style: none;
-        margin-top: 5px;
-        padding-left: 10px;
-    }
-
-        #listaRicette ul li {
-            font-weight: normal;
-            color: var(--text-color);
-            padding: 6px 10px;
-            margin: 3px 0;
-            font-size: 0.95rem;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-
-
-/* ==========================================
-   5. CORPO DELLA RICETTA
-   ========================================== 
-#corpo {
-    flex: 3; /* Prende 3 quote di spazio (più largo del menu) 
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-#titoloRicetta {
-    font-size: 2.2rem;
-    color: var(--text-color);
-    margin-bottom: 25px;
-    position: relative;
-}
-
-/* Sottotitoli: Ingredienti, Storia, Procedimento 
-#corpo h3 {
-    font-size: 1.4rem;
-    color: var(--accent-color);
-    margin-top: 30px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 5px;
-}
-
-/* I paragrafi di testo delle ricette 
-#corpo p {
-    font-size: 1.05rem;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-/* ==========================================
-   6. RESPONSIVENESS (Ottimizzazione Mobile)
-   ========================================== 
-@media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Menu e corpo si impilano in verticale su smartphone 
-        margin: 15px auto;
-        gap: 20px;
-    }
-
-    #menu {
-        width: 100%; /* Larghezza piena su mobile 
-    }
-
-    #corpo {
-        padding: 25px; /* Un po' meno padding per non rubare spazio allo schermo 
-    }
-}*/
 .nascosto {
     display: none;
 }
