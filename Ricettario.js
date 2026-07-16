@@ -61,11 +61,14 @@ form.addEventListener("submit", function (event) {
     messaggio.classList.remove("nascosto");
 });
 
+/**
+ * @param {Ricetta} ricetta
+ */
 function mostraDettagliRicetta(ricetta) {
 
     //scrivo il titolo della ricetta
     document.getElementById('titoloRicetta').textContent = ricetta.titolo;
-
+    
     //scrivo porzioni
     document.getElementById('contenutoPorzioni').textContent = ricetta.porzioni;
 
@@ -91,6 +94,11 @@ function mostraDettagliRicetta(ricetta) {
     });
 }
 
+/**
+ * 
+ * @param {string} titolo
+ * @returns {boolean}
+ */
 function checkContent(titolo) {
     const titoloRicetta = document.getElementById('titoloRicetta').textContent;
     if (titoloRicetta === titolo) { return true; }
@@ -103,9 +111,11 @@ function svuotaBody() {
     document.getElementById('contenutoIngredienti').innerHTML = '';
     document.getElementById('contenutoStoria').textContent = '';
     document.getElementById('contenutoProcedimento').innerHTML = '';
-
 }
 
+/**
+ * @param {string} tipologia
+ */
 function clickOnMenu(tipologia) {
     const tasto = document.getElementById(tipologia); // primi, secondi...
     const lista = document.getElementById(`lista${tipologia.charAt(0).toUpperCase() + tipologia.slice(1)}`); // listaPrimi, listaSecondi...
