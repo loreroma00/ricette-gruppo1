@@ -101,8 +101,8 @@ tastoPrimi.addEventListener('click', function (evento) {
 
         // Al click mostra i dettagli
         nuovoLi.addEventListener('click', function (evento) {
-            evento.stopPropagation(); // Evita che si chiuda il menu a tendina
-            mostraDettagliRicetta(ricetta); // Chiama la funzione sopra!
+            evento.stopPropagation();
+            mostraDettagliRicetta(ricetta); 
         });
 
         listaPrimi.appendChild(nuovoLi);
