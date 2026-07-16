@@ -1,0 +1,67 @@
+{
+  "titolo": "Caponata di Melanzane",
+  "tipologia": "contorno",
+  "porzioni": 6,
+  "ingredienti": [
+    {
+      "nome": "Melanzane",
+      "quantita": 700,
+      "unita": "g"
+    },
+    {
+      "nome": "Sedano",
+      "quantita": 150,
+      "unita": "g"
+    },
+    {
+      "nome": "Cipolla",
+      "quantita": 200,
+      "unita": "g"
+    },
+    {
+      "nome": "Olive verdi denocciolate",
+      "quantita": 80,
+      "unita": "g"
+    },
+    {
+      "nome": "Capperi sotto sale",
+      "quantita": 30,
+      "unita": "g"
+    },
+    {
+      "nome": "Passata di pomodoro",
+      "quantita": 200,
+      "unita": "ml"
+    },
+    {
+      "nome": "Aceto di vino bianco",
+      "quantita": 50,
+      "unita": "ml"
+    },
+    {
+      "nome": "Zucchero",
+      "quantita": 25,
+      "unita": "g"
+    },
+    {
+      "nome": "Olio per friggere",
+      "quantita": 500,
+      "unita": "ml"
+    },
+    {
+      "nome": "Basilico",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Tagliare le melanzane a cubi di 2 cm e friggerle in olio profondo finché non sono dorate.",
+    "Scolare le melanzane su carta assorbente e salarle subito.",
+    "Sbollentare il sedano a tocchetti per 3 minuti, poi raffreddarlo in acqua e ghiaccio.",
+    "Appassire la cipolla a fuoco dolce in poco olio, senza colorirla.",
+    "Aggiungere passata, olive, capperi dissalati e sedano; cuocere 10 minuti.",
+    "Sciogliere lo zucchero nell'aceto e versarlo nel tegame: è l'agrodolce, e va fatto evaporare a fuoco vivo.",
+    "Unire le melanzane fritte e mescolare delicatamente per non spappolarle.",
+    "Lasciare riposare almeno 12 ore: la caponata si mangia il giorno dopo, mai appena fatta."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "titolo": "Crostata di Marmellata",
+  "tipologia": "dolce",
+  "porzioni": 8,
+  "ingredienti": [
+    {
+      "nome": "Farina 00",
+      "quantita": 300,
+      "unita": "g"
+    },
+    {
+      "nome": "Burro freddo",
+      "quantita": 150,
+      "unita": "g"
+    },
+    {
+      "nome": "Zucchero",
+      "quantita": 120,
+      "unita": "g"
+    },
+    {
+      "nome": "Tuorli",
+      "quantita": 2,
+      "unita": "pz"
+    },
+    {
+      "nome": "Marmellata di albicocche",
+      "quantita": 400,
+      "unita": "g"
+    },
+    {
+      "nome": "Scorza di limone",
+      "quantita": 1,
+      "unita": "pz"
+    },
+    {
+      "nome": "Sale",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Sabbiare il burro freddo con la farina fino a ottenere un composto granuloso.",
+    "Aggiungere zucchero, tuorli, scorza di limone e un pizzico di sale.",
+    "Compattare l'impasto rapidamente senza lavorarlo: il calore delle mani scioglie il burro.",
+    "Avvolgere nella pellicola e far riposare in frigo per almeno 1 ora.",
+    "Stendere due terzi della pasta e foderare uno stampo da 24 cm.",
+    "Farcire con la marmellata e decorare con le strisce ricavate dalla pasta rimanente.",
+    "Cuocere a 180°C per 35 minuti, finché la frolla non è dorata."
+  ]
+}

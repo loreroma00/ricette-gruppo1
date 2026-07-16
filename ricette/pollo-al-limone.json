@@ -1,0 +1,50 @@
+{
+  "titolo": "Pollo al Limone",
+  "tipologia": "secondo",
+  "porzioni": 4,
+  "ingredienti": [
+    {
+      "nome": "Petto di pollo",
+      "quantita": 600,
+      "unita": "g"
+    },
+    {
+      "nome": "Limoni",
+      "quantita": 2,
+      "unita": "pz"
+    },
+    {
+      "nome": "Farina 00",
+      "quantita": 40,
+      "unita": "g"
+    },
+    {
+      "nome": "Burro",
+      "quantita": 30,
+      "unita": "g"
+    },
+    {
+      "nome": "Brodo vegetale",
+      "quantita": 150,
+      "unita": "ml"
+    },
+    {
+      "nome": "Sale",
+      "quantita": null,
+      "unita": "q.b."
+    },
+    {
+      "nome": "Pepe",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Tagliare il petto di pollo a fettine spesse circa 1 cm.",
+    "Infarinare leggermente le fettine, scuotendo via la farina in eccesso.",
+    "Rosolare il pollo nel burro a fuoco vivace, 2 minuti per lato.",
+    "Sfumare con il succo dei limoni e aggiungere il brodo.",
+    "Ridurre il fondo a fuoco medio finché non diventa sciropposo.",
+    "Aggiustare di sale e pepe e servire subito con la salsa."
+  ]
+}

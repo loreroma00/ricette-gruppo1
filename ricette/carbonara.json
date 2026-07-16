@@ -1,0 +1,40 @@
+{
+  "titolo": "Spaghetti alla Carbonara",
+  "tipologia": "primo",
+  "porzioni": 2,
+  "ingredienti": [
+    {
+      "nome": "Spaghetti",
+      "quantita": 200,
+      "unita": "g"
+    },
+    {
+      "nome": "Guanciale",
+      "quantita": 100,
+      "unita": "g"
+    },
+    {
+      "nome": "Tuorli",
+      "quantita": 4,
+      "unita": "pz"
+    },
+    {
+      "nome": "Pecorino Romano",
+      "quantita": 50,
+      "unita": "g"
+    },
+    {
+      "nome": "Pepe nero",
+      "quantita": null,
+      "unita": "q.b."
+    }
+  ],
+  "steps": [
+    "Tagliare il guanciale a listarelle spesse mezzo centimetro.",
+    "Rosolare il guanciale in padella fredda, senza grassi aggiunti, finché non è croccante.",
+    "Mescolare i tuorli con il pecorino grattugiato e abbondante pepe nero.",
+    "Cuocere gli spaghetti in acqua bollente poco salata.",
+    "Stemperare la crema di tuorli con un mestolo di acqua di cottura.",
+    "Scolare la pasta e mantecare fuori dal fuoco con la crema e il guanciale."
+  ]
+}
