@@ -2,6 +2,8 @@
   "titolo": "Spaghetti alla Carbonara",
   "tipologia": "primo",
   "porzioni": 2,
+  "storia": "Le origini della carbonara sono contese e nessuna versione è dimostrata. La tesi più accreditata la lega al dopoguerra: uova in polvere e bacon delle razioni americane incontrano la pasta romana. Altre ipotesi la fanno risalire ai carbonari dell'Appennino, o a un piatto napoletano ottocentesco. Il dato certo è documentario: la ricetta compare stampata solo negli anni Cinquanta, il che rende la carbonara molto più giovane di quanto la sua fama di piatto tradizionale suggerisca. Curiosamente, le prime versioni scritte prevedevano panna e pancetta, oggi considerate eresie.",
+  "urlImmagine": "https://placehold.co/600x400/f4d35e/3d2b1f?text=Carbonara",
   "ingredienti": [
     {
       "nome": "Spaghetti",

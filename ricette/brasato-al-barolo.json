@@ -2,6 +2,8 @@
   "titolo": "Brasato al Barolo",
   "tipologia": "secondo",
   "porzioni": 6,
+  "storia": "Nasce nelle Langhe nell'Ottocento, quando il Barolo smette di essere un vino dolce e diventa il rosso austero che conosciamo. È un piatto di recupero travestito da piatto nobile: il taglio è povero, pieno di collagene e immangiabile se cotto in fretta, e le ore di brasatura servono a trasformare quel collagene in gelatina. Il vino non è lì per lusso, è lì perché la sua acidità accelera la disgregazione delle fibre. Il paradosso è che oggi si usa una bottiglia costosa per nobilitare un pezzo di carne che allora costava nulla: la logica economica originale si è capovolta, la tecnica no.",
+  "urlImmagine": "https://placehold.co/600x400/5c1a2e/e8d5c4?text=Brasato+al+Barolo",
   "ingredienti": [
     {
       "nome": "Cappello del prete",

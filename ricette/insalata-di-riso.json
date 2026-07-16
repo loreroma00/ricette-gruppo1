@@ -2,6 +2,8 @@
   "titolo": "Insalata di Riso",
   "tipologia": "primo",
   "porzioni": 4,
+  "storia": "Piatto del boom economico: arriva quando arrivano il frigorifero, le scatolette e le vacanze al mare. Non ha una regione, ha una stagione. È anche uno dei pochi piatti italiani in cui la sottomarca in barattolo non è un ripiego ma la norma, e nessuno se ne scandalizza.",
+  "urlImmagine": "https://placehold.co/600x400/a8c66c/2f3d1f?text=Insalata+di+Riso",
   "ingredienti": [
     {
       "nome": "Riso Parboiled",

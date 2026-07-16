@@ -2,6 +2,8 @@
   "titolo": "Caponata di Melanzane",
   "tipologia": "contorno",
   "porzioni": 6,
+  "storia": "L'agrodolce siciliano è un'eredità araba, arrivata sull'isola secoli prima delle melanzane stesse. Sull'etimologia si litiga: c'è chi la fa derivare dal capone, un pesce pregiato che nelle case povere venne sostituito dalle melanzane, e chi la lega alla caponata catalana. Esistono decine di versioni, e non è un dettaglio folkloristico: la caponata è un piatto di conservazione, e ogni variante riflette ciò che l'orto dava e ciò che l'aceto permetteva di tenere. Il riposo di dodici ore non è pignoleria da chef, è il piatto che finisce di farsi.",
+  "urlImmagine": "https://placehold.co/600x400/6b4c7a/f0e6d2?text=Caponata",
   "ingredienti": [
     {
       "nome": "Melanzane",

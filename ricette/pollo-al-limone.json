@@ -2,6 +2,8 @@
   "titolo": "Pollo al Limone",
   "tipologia": "secondo",
   "porzioni": 4,
+  "storia": "Esiste in mezzo mondo e non appartiene a nessuno: c'è una versione cinese fritta e sciropposa, una greca al forno con le patate, una italiana in padella. Sono piatti diversi che condividono un'intuizione sola, cioè che l'acidità del limone taglia la piattezza delle carni bianche. Questa è la versione da trattoria: infarinatura leggera, fondo ridotto, niente di più.",
+  "urlImmagine": "https://placehold.co/600x400/f2e8a0/4a4a1f?text=Pollo+al+Limone",
   "ingredienti": [
     {
       "nome": "Petto di pollo",

@@ -2,6 +2,8 @@
   "titolo": "Crostata di Marmellata",
   "tipologia": "dolce",
   "porzioni": 8,
+  "storia": "La pasta frolla nasce come contenitore, non come dolce: nel medioevo l'impasto serviva a sigillare e conservare il ripieno, e spesso non si mangiava nemmeno. Con l'arrivo dello zucchero a buon mercato il contenitore diventa protagonista. Le strisce incrociate sopra non sono decorazione: lasciano evaporare l'umidità della marmellata, che altrimenti bagnerebbe la base.",
+  "urlImmagine": "https://placehold.co/600x400/e8a33d/4a2c17?text=Crostata",
   "ingredienti": [
     {
       "nome": "Farina 00",
