@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Ricettario</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -55,6 +56,56 @@
     </main>
     <!--Footer-->
     <footer>
+        <!--From per iscriversi alla newsletter con struttura grid-->
+        <div class="newsletter">
+            <h2>Iscriviti alla newsletter:</h2>
+            <form id="newsletterForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
+
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Inserisci la tua email">
+
+                <!--Bottone per registrazione a newsletter-->
+                <button type="submit" id="bottoneIscrizione">Iscriviti</button>
+            </form>
+            <!--Messaggio di avvenuta registrazione alla newsletter-->
+            <p id="messaggio" class="nascosto">Grazie per esserti iscritto!</p>
+        </div>
+
+        <!--Sezione contatti e social con struttura flex-->
+        <div class="contattiSocial">
+            <!--Sezione contatti con struttura grid-->
+            <div class="contatti">
+                <h2>Contatti:</h2>
+                <p>Email: <a href="mailto:info@ricettario.it">info@ricettario.it</a></p>
+                <p>Telefono: <a href="tel:+390212345678">02 1234 5678</a></p>
+            </div>
+
+            <!--Sezione social con struttura flex-->
+            <div class="social">
+                <h2>Seguici:</h2>
+                <!--Nei link ai social usiamo le icone tramite StyleSheet richiamato in header
+                    e qui mettiamo riferimento alle classi in cui sono contenute le icone-->
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="Ricettario.js"></script>
 </body>

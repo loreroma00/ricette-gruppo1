@@ -1,3 +1,115 @@
-﻿body
-{
+﻿.nascosto {
+    display: none;
+}
+
+
+.newsletter {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    background-color: #7c8c5a;
+    color: #faf3e9;
+    padding: 40px 60px;
+    text-align: left;
+}
+
+.newsletter h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#newsletterForm {
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter label {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 2px;
+    text-align: left;
+}
+
+.newsletter input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.contattiSocial {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #d8722c;
+    gap: 200px;
+    padding: 40px 60px;
+}
+
+.contatti {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    color: #faf3e9;
+}
+
+.contatti h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.contatti a:hover {
+    color: #e8a33d;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #faf3e9;
+}
+
+.social h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    padding: 10px;
+    gap: 25px;
+}
+
+.social i {
+    font-size: 22px;
+    color: #f5f0e8;
+    transition: color 0.2s;
+}
+
+.social i:hover {
+    color: #e8a33d;
+}
+
+#bottoneIscrizione {
+    background-color: #faf3e9;
+    color: black;
+    border: 2px solid #6e4a2e;
+    padding: 6px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 18px;
+}
+
+#bottoneIscrizione:hover {
+    background-color: #d8722c;
+    color: white;
 }
