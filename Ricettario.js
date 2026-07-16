@@ -1,73 +1,72 @@
 // JavaScript source code
 
-const ricettario = [
-    {
-        id: "patate-al-forno-croccanti",
-        titolo: "Patate al Forno Croccanti",
-        tipologia: "contorno",
-        porzioni: 4,
-        ingredienti: [
-            { nome: "Patate", quantita: 800, unita: "g" },
-            { nome: "Olio extravergine d'oliva", quantita: 30, unita: "ml" },
-            { nome: "Rosmarino", quantita: 5, unita: "g" },
-            { nome: "Aglio", quantita: 2, unita: "spicchi" },
-            { nome: "Sale fino", quantita: null, unita: "q.b." }
-        ],
-        steps: [
-            "Pelare le patate e tagliarle a cubetti di circa 2 cm.",
-            "Sbollentare i cubetti in acqua bollente salata per 5 minuti.",
-            "Scolare le patate e lasciarle asciugare per qualche minuto.",
-            "Preriscaldare il forno a 200°C statico.",
-            "In una teglia, condire le patate con l'olio, gli spicchi d'aglio e il rosmarino.",
-            "Infornare per 30-40 minuti, mescolando a meta' cottura, fino a doratura."
-        ]
-    },
-    {
-        id: "carbonara",
-        titolo: "Spaghetti alla Carbonara",
-        tipologia: "primo",
-        porzioni: 2,
-        ingredienti: [
-            { nome: "Spaghetti", quantita: 200, unita: "g" },
-            { nome: "Guanciale", quantita: 100, unita: "g" },
-            { nome: "Tuorli", quantita: 4, unita: "pz" },
-            { nome: "Pecorino Romano", quantita: 50, unita: "g" },
-            { nome: "Pepe nero", quantita: null, unita: "q.b." }
-        ],
-        steps: [
-            "Tagliare il guanciale a listarelle spesse circa mezzo centimetro.",
-            "Rosolare il guanciale in padella fredda, senza grassi aggiunti, finche' non e' croccante.",
-            "In una ciotola, mescolare i tuorli con il pecorino grattugiato e abbondante pepe nero.",
-            "Cuocere gli spaghetti in acqua bollente poco salata.",
-            "Stemperare la crema di tuorli con un mestolo di acqua di cottura.",
-            "Scolare la pasta, mantecare fuori dal fuoco con la crema e il guanciale."
-        ]
-    },
-    {
-        id: "tiramisu",
-        titolo: "Tiramisu'",
-        tipologia: "dolce",
-        porzioni: 6,
-        ingredienti: [
-            { nome: "Savoiardi", quantita: 300, unita: "g" },
-            { nome: "Mascarpone", quantita: 500, unita: "g" },
-            { nome: "Uova", quantita: 4, unita: "pz" },
-            { nome: "Zucchero", quantita: 100, unita: "g" },
-            { nome: "Caffe' espresso", quantita: 300, unita: "ml" },
-            { nome: "Cacao amaro", quantita: null, unita: "q.b." }
-        ],
-        steps: [
-            "Preparare il caffe' e lasciarlo raffreddare completamente.",
-            "Montare i tuorli con lo zucchero fino a ottenere un composto chiaro e spumoso.",
-            "Incorporare il mascarpone poco alla volta, mescolando dal basso verso l'alto.",
-            "Montare gli albumi a neve ferma e unirli delicatamente alla crema.",
-            "Inzuppare velocemente i savoiardi nel caffe' e disporli in uno strato.",
-            "Alternare strati di crema e savoiardi, terminando con la crema.",
-            "Spolverare di cacao amaro e riporre in frigo per almeno 4 ore."
-        ]
-    }
-]; 
+// @ts-check
 
+/**
+ * @typedef { 'g' | 'ml' | 'pz' | 'spicchi' | 'q.b.' } unita;
+ */
+
+/**
+ * @typedef {Object} Ingrediente
+ * @property {string} nome - Nome dell'ingrediente
+ * @property {number|null} quantita - Quantità dell'ingrediente
+ * @property {unita} unita - Unità di misura dell'ingrediente}
+ */
+
+/**
+ * @typedef {Object} Ricetta
+ * @property {string} titolo - Titolo della ricetta
+ * @property {string} tipologia - Tipologia della ricetta
+ * @property {number} porzioni - Numero di porzioni della ricetta
+ * @property {Ingrediente[]} ingredienti - Lista degli ingredienti della ricetta
+ * @property {string[]} steps - Lista dei passaggi della ricetta
+ */
+
+/**
+ *      
+ * @param {string} url
+ * @returns {Promise<any>}}
+ */
+async function fetchJson(url) {
+    const res = await fetch(url);
+    if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    return res.json();
+}
+
+/** @returns {Promise<Ricetta[]>} */
+async function loadRicettario() {
+    const nomi = await fetchJson('ricette/manifest.json');
+    const promesse = nomi.map(nome => fetchJson(`ricette/${nome}`));
+    return Promise.all(promesse);
+}
+
+/** @type {Ricetta[]} */
+let ricettario = [];
+
+async function main() {
+    try {
+        ricettario = await loadRicettario();
+        console.log(ricettario);
+    } catch (error) {
+        console.error('Errore durante il caricamento del ricettario:', error);
+    }
+}
+
+const messaggio = document.querySelector("#messaggio");
+const form = document.querySelector("#newsletterForm");
+
+form.addEventListener("submit", function (event) {
+    // blocca il reload della pagina
+    event.preventDefault();
+
+    // nasconde il form
+    form.style.display = "none";
+
+    // mostra il messaggio
+    messaggio.classList.remove("nascosto");
+});
 
 /************************************ LISTA PRIMI *************************************/
 //tasto fisico che serve per vedere i primi
@@ -198,73 +197,5 @@ function mostraDettagliRicetta(ricetta) {
         procedimento.innerHTML += `${indice + 1}. ${step}<br><br>`;
     });
 }
-
-// @ts-check
-
-/**
- * @typedef { 'g' | 'ml' | 'pz' | 'spicchi' | 'q.b.' } unita;
- */
-
-/**
- * @typedef {Object} Ingrediente
- * @property {string} nome - Nome dell'ingrediente
- * @property {number|null} quantita - Quantità dell'ingrediente
- * @property {unita} unita - Unità di misura dell'ingrediente}
- */
-
-/**
- * @typedef {Object} Ricetta
- * @property {string} titolo - Titolo della ricetta
- * @property {string} tipologia - Tipologia della ricetta
- * @property {number} porzioni - Numero di porzioni della ricetta
- * @property {Ingrediente[]} ingredienti - Lista degli ingredienti della ricetta
- * @property {string[]} steps - Lista dei passaggi della ricetta
- */
-
-/**
- *      
- * @param {string} url
- * @returns {Promise<any>}}
- */
-async function fetchJson(url) {
-    const res = await fetch(url);
-    if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-    }
-    return res.json();
-}
-
-/** @returns {Promise<Ricetta[]>} */
-async function loadRicettario() {
-    const nomi = await fetchJson('ricette/manifest.json');
-    const promesse = nomi.map(nome => fetchJson(`ricette/${nome}`));
-    return Promise.all(promesse);
-}
-
-/** @type {Ricetta[]} */
-let ricettario = [];
-
-async function main() {
-    try {
-        ricettario = await loadRicettario();
-        console.log(ricettario);
-    } catch (error) {
-        console.error('Errore durante il caricamento del ricettario:', error);
-    }
-}
-
-const messaggio = document.querySelector("#messaggio");
-const form = document.querySelector("#newsletterForm");
-
-form.addEventListener("submit", function (event) {
-    // blocca il reload della pagina
-    event.preventDefault();
-
-    // nasconde il form
-    form.style.display = "none";
-
-    // mostra il messaggio
-    messaggio.classList.remove("nascosto");
-});
 
 main();
