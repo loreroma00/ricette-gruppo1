@@ -159,6 +159,26 @@ function clickOnMenu(tipologia) {
     });
 }
 
+/**
+ * @param {string} recipeName
+ * @returns {string[]}
+ */
+function searchRecipe(recipeName){
+    /** @type {string[]} */
+    let foundRecipes = [];
+    // const soloTipologia = ricettario.filter(ricetta => ricetta.tipologia === tipologia);
+    foundRecipes.push(ricettario.filter(ricetta => ricetta.titolo.toLowerCase().includes(recipeName.toLowerCase())));
+    return foundRecipes;
+}
+
+function addEventListenerToSearch() {
+    const searchInput = document.getElementById('searchBarText');
+    const searchButton = document.getElementById('searchBarButton');
+    searchButton.addEventListener('click', function (event) {
+        console.log(searchRecipe(searchInput.value));
+    });
+}
+
 async function main() {
     try {
         ricettario = await loadRicettario();
@@ -170,6 +190,7 @@ async function main() {
     clickOnMenu('secondo');
     clickOnMenu('contorno');
     clickOnMenu('dolce');
+    addEventListenerToSearch();
 }
 
 main();
