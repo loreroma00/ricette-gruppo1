@@ -1,84 +1,125 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font carino -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Ricettario</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font carino -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <title>Ricettario</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
 
-    <!-- HEADER -->
-    <div class="row" id="header">
-        <div class="col-sm-1" id="hamburger-menu">
-            <!--Hamburger menu-->
-            <div class="dropdown">
-                <button class="btn btn-secondary bg-transparent border border-0" id="hamburger" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-list"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" type="button">Primi</button></li>
-                    <li><button class="dropdown-item" type="button">Secondi</button></li>
-                    <li><button class="dropdown-item" type="button">Contorni</button></li>
-                    <li><button class="dropdown-item" type="button">Dolci</button></li>
-                </ul>
-            </div>
-        </div>
-
-        <!--Logo-->
-        <div class="col-md-5">
-            <div class="header-left">
-                <a href="#" class="logo-link">
-                    <img src="Logo.png" alt="Logo Ricette" class="logo-image" />
-                </a>
-                <h1>Ricette della Nonna</h1>
-            </div>
-        </div>
-
-        <!-- Barra di ricerca - Colonna destra-->
-        <div class="col-md-4">
-            <div class="header-search-section">
-                <label class="search-bar-static">
-                    <input type="text" id="searchBarText" placeholder="Cerca una ricetta" />
-                    <button class="btn btn-primary d-flex align-items-center" type="button" id="searchBarButton">
-                        <span class="material-symbols-outlined fs-5">search</span>
+        <!-- HEADER -->
+        <div class="row" id="header">
+            <div class="col-sm-1" id="hamburger-menu">
+                <!--Hamburger menu-->
+                <div class="dropdown">
+                    <button class="btn btn-secondary bg-transparent border border-0" id="hamburger" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i>
                     </button>
-                    <!--<button id="searchBarButton" class="material-symbols-outlined search-icon">search</button>-->
-                    <!--<input type="button" id="searchBarButton" class="material-symbols-outlined search-icon">-->
-                </label>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button">Primi</button></li>
+                        <li><button class="dropdown-item" type="button">Secondi</button></li>
+                        <li><button class="dropdown-item" type="button">Contorni</button></li>
+                        <li><button class="dropdown-item" type="button">Dolci</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Logo-->
+            <div class="col-md-5">
+                <div class="header-left">
+                    <a href="#" class="logo-link">
+                        <img src="Logo.png" alt="Logo Ricette" class="logo-image" />
+                    </a>
+                    <h1>Ricette della Nonna</h1>
+                </div>
+            </div>
+
+            <!-- Barra di ricerca - Colonna destra-->
+            <div class="col-md-4">
+                <div class="header-search-section">
+                    <label class="search-bar-static">
+                        <input type="text" id="searchBarText" placeholder="Cerca una ricetta" />
+                        <button class="btn btn-primary d-flex align-items-center" type="button" id="searchBarButton">
+                            <span class="material-symbols-outlined fs-5">search</span>
+                        </button>
+                        <!--<button id="searchBarButton" class="material-symbols-outlined search-icon">search</button>-->
+                        <!--<input type="button" id="searchBarButton" class="material-symbols-outlined search-icon">-->
+                    </label>
+                </div>
+            </div>
+
+            <!--Login Button-->
+            <div class="col-sm-2">
+                <a href="#" class="login-button">Accedi</a>
+            </div>
+
+        </div>
+
+        <!-- BODY -->
+        <div class="row">
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="container-fluid p-0">
+            <div class="row m-0 justify-content-center" id="newsletter">
+                <div class="col-12 col-md-6 text-center">
+                    <h2>Iscriviti alla newsletter:</h2>
+                    <form id="newsletterForm">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
+
+                        <label for="cognome">Cognome:</label>
+                        <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Inserisci la tua email">
+
+                        <button type="submit" id="bottoneIscrizione">Iscriviti</button>
+                    </form>
+                    <p id="messaggio" class="nascosto">Grazie per esserti iscritto!</p>
+                </div>
+            </div>
+
+            <div class="row m-0 justify-content-center" id="contattiSocial">
+                <div class="col-12 col-md-4 contatti">
+                    <h2>Contatti:</h2>
+                    <p>Email: <a href="mailto:info@ricettario.it">info@ricettario.it</a></p>
+                    <p>Telefono: <a href="tel:+390212345678">02 1234 5678</a></p>
+                </div>
+                <div class="col-12 col-md-4 social">
+                    <h2>Seguici:</h2>
+                    <div class="social-icons">
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!--Login Button-->
-        <div class="col-sm-2">
-            <a href="#" class="login-button">Accedi</a>
-        </div>
-
-    </div>
-
-    <!-- BODY -->
-    <div class="row">
-
-    </div>
-
-    <!-- FOOTER -->
-    <div class="row">
-
-    </div>
-
-
-    <!-- SCRIPTS -->
-    <script src="Ricettario.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
-</body>
+        <!-- SCRIPTS -->
+        <script src="Ricettario.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                crossorigin="anonymous"></script>
+    </body>
 </html>

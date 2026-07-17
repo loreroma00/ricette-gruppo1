@@ -155,6 +155,8 @@ h1 {
     padding-top: 20px;
     padding: 10px 22px;
     border-radius: 30px;
+    border: none;
+    cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -287,67 +289,69 @@ main {
     display: none;
 }
 
-
-.newsletter {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    background-color: #7c8c5a;
-    color: #faf3e9;
-    padding: 40px 60px;
-    text-align: left;
+#newsletter {
+    background-color: #faf3e9;
+    color: #7c8c5a;
+    padding: 20px 20px;
+    text-align: center;
 }
 
-.newsletter h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+#newsletter h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
 #newsletterForm {
     display: grid;
     justify-items: center;
-    gap: 15px;
+    gap: 12px;
     width: 100%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
-.newsletter label {
+#newsletter label {
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 2px;
     text-align: left;
 }
 
-.newsletter input {
+#newsletter input {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    padding: 8px 10px;
+    padding: 6px 10px;
     border: none;
     border-radius: 4px;
+    font-size: 16px;
 }
 
-.contattiSocial {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #d8722c;
-    gap: 200px;
-    padding: 40px 60px;
+/* #bottoneIscrizione {
+    justify-self: center;
+    margin-top: 8px;
+    border: none;
+    font-size: 14px;
+} */
+
+#contattiSocial {
+    background-color: rgba(216, 114, 44, 0.80);    
+    padding: 20px 20px;
 }
 
 .contatti {
-    display: grid;
-    justify-items: center;
     text-align: center;
     color: #faf3e9;
 }
 
 .contatti h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.contatti p, .contatti a {
+    font-size: 15px;
 }
 
 .contatti a:hover {
@@ -355,26 +359,24 @@ main {
 }
 
 .social {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    text-align: center;
     color: #faf3e9;
 }
 
 .social h2 {
-    font-size: 30px;
-    margin-bottom: 30px;
+    font-size: 23px;
+    margin-bottom: 15px;
 }
 
 .social-icons {
     display: flex;
+    justify-content: center;
     padding: 10px;
-    gap: 25px;
+    gap: 20px;
 }
 
 .social i {
-    font-size: 22px;
+    font-size: 18px;
     color: #f5f0e8;
     transition: color 0.2s;
 }
