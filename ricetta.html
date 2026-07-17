@@ -66,53 +66,98 @@
 
     <!-- BODY -->
 
-   <div class="row" id="body3">
+    <div class="row" id="body3">
 
         <!-- TITOLO RICETTA -->
-       <div class="col-xl-6 mx-5 mt-2 my-1">
-           <h1>TITOLO RICETTA</h1>
-       </div>
+        <div class="col-xl-6 mx-5 mt-2 my-1">
+            <h1>TITOLO RICETTA</h1>
+        </div>
     </div>
     <div class="row mx-5" id="body4">
 
-       <!-- STORIA -->
-       <div class="col-xl-6">
-           <p class="fs-3">storia ricetta</p>
-       </div>
+        <!-- STORIA -->
+        <div class="col-xl-6">
+            <p class="fs-3">storia ricetta</p>
+        </div>
 
-       <!-- INGREDIENTI -->
-       <div class="col-xl-6">
-           <h2>INGREDIENTI</h2>
-           <ul>
-               <li class="fs-4">Ingrediente 1</li>
-               <li class="fs-4">Ingrediente 2</li>
-               <li class="fs-4">Ingrediente 3</li>
-           </ul>
-       </div>
+        <!-- INGREDIENTI -->
+        <div class="col-xl-6">
+            <h2>INGREDIENTI</h2>
+            <ul>
+                <li class="fs-4">Ingrediente 1</li>
+                <li class="fs-4">Ingrediente 2</li>
+                <li class="fs-4">Ingrediente 3</li>
+            </ul>
+        </div>
 
         <!-- PROCEDIMENTO -->
-       <div class="col-xl-12">
-           <h2>PROCEDIMENTO</h2>
-           <ol>
-               <li class="fs-4">PASSO 1
-               <p>Descrizione del passo 1</p>
-               </li>
+        <div class="col-xl-12">
+            <h2>PROCEDIMENTO</h2>
+            <ol>
+                <li class="fs-4">
+                    PASSO 1
+                    <p>Descrizione del passo 1</p>
+                </li>
 
-               <li class="fs-4">PASSO 2
-               <p>Descrizione del passo 2</p>
-               </li>
+                <li class="fs-4">
+                    PASSO 2
+                    <p>Descrizione del passo 2</p>
+                </li>
 
-               <li class="fs-4">PASSO 3
-               <p>Descrizione del passo 3</p>
-               </li>
-           </ol>
-       </div>
+                <li class="fs-4">
+                    PASSO 3
+                    <p>Descrizione del passo 3</p>
+                </li>
+            </ol>
+        </div>
 
     </div>
 
     <!-- FOOTER -->
-    <div class="row">
+    <div class="container-fluid p-0">
+        <div class="row m-0 justify-content-center" id="newsletter">
+            <div class="col-12 col-md-6 text-center">
+                <h2>Iscriviti alla newsletter:</h2>
+                <form id="newsletterForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Inserisci il tuo nome">
 
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" id="cognome" name="cognome" placeholder="Inserisci il tuo cognome">
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email">
+
+                    <button type="submit" id="bottoneIscrizione">Iscriviti</button>
+                </form>
+                <p id="messaggio" class="nascosto">Grazie per esserti iscritto!</p>
+            </div>
+        </div>
+
+        <div class="row m-0 justify-content-center" id="contattiSocial">
+            <div class="col-12 col-md-4 contatti">
+                <h2>Contatti:</h2>
+                <p>Email: <a href="mailto:info@ricettario.it">info@ricettario.it</a></p>
+                <p>Telefono: <a href="tel:+390212345678">02 1234 5678</a></p>
+            </div>
+            <div class="col-12 col-md-4 social">
+                <h2>Seguici:</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
 
