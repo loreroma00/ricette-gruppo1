@@ -36,6 +36,11 @@
     user-select: none; /* Impedisce la selezione del testo 
 } */
 
+#header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-primary-dark);
+}
+
 #hamburger-menu {
     padding-left: 30px;
     padding-right: -40px;
