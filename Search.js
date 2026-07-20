@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Aggiungi i dettagli della ricetta al newRow
 
             const title = document.createElement('h3');
-            title.textContent = ricetta.titolo;
+            const titleLink = document.createElement('a');
+
+            titleLink.textContent = ricetta.titolo;
+            titleLink.href = '/ricetta.html';
+            titleLink.addEventListener('click', function () { sendToRecipePage(ricetta); });
+            title.appendChild(titleLink);
             newRow.appendChild(title);
 
             const history = document.createElement('p');

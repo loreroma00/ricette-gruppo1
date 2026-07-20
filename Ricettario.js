@@ -214,7 +214,9 @@ function addEventListenerToSearch() {
     const searchInput = document.getElementById('searchBarText');
     const searchButton = document.getElementById('searchBarButton');
     searchButton.addEventListener('click', function (event) {
-        console.log(searchRecipe(searchInput.value));
+        let results = searchRecipe(searchInput.value);
+        sessionStorage.setItem('risultatiRicerca', JSON.stringify(results));
+        window.location.href = "/search.html";
     });
 }
 

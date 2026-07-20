@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ricetta.steps.forEach((step, index) => {
         let li = document.createElement('li');
         li.classList.add('fs-4');
-        li.innerHTML = `PASSO ${index + 1}`;
+        li.innerHTML = `° PASSO`;
         paragraph = document.createElement('p');
         paragraph.textContent = step;
         li.appendChild(paragraph);
