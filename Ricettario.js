@@ -118,57 +118,96 @@ function svuotaBody() {
  */
 function clickOnMenu(tipologia) {
     const tasto = document.getElementById(tipologia); // primi, secondi...
-    const lista = document.getElementById(`lista${tipologia.charAt(0).toUpperCase() + tipologia.slice(1)}`); // listaPrimi, listaSecondi...
-    tasto.addEventListener('click', function (evento) {
-        // Se lista visibile e piena allora viene svuotata e nascosta
-        if (lista.children.length > 0) {
-            lista.innerHTML = '';
-            return;
-        }
-
-        //ricetta = oggetto di quella ricetta, es: oggetto carbonara
-        //se tipologia = primo viene tenuto
-        //soloPrimi è un array che conterrà tutti gli oggetti ricetta che sono dei primi
+    tasto.addEventListener('click', function (evento) { 
         const soloTipologia = ricettario.filter(ricetta => ricetta.tipologia === tipologia);
-
-
-        //scorro le ricette in soloPrimi 
-        //per ognuna creo un elemento fisico nell'html (li) e mostro solo il titolo 
-        soloTipologia.forEach(ricetta => {
-            const nuovoLi = document.createElement('li');
-            nuovoLi.textContent = ricetta.titolo;
-
-            // Rendi il piatto cliccabile con la manina
-            nuovoLi.style.cursor = "pointer";
-
-            // Al click mostra i dettagli
-            nuovoLi.addEventListener('click', function (evento) {
-                if (checkContent(ricetta.titolo)) {
-                    // Fai qualcosa se il contenuto è già mostrato
-                    svuotaBody(); // Svuota il contenuto della ricetta
-                }
-                else {
-                    evento.stopPropagation(); // Evita che si chiuda il menu a tendina
-                    mostraDettagliRicetta(ricetta); // Chiama la funzione sopra!
-                }
-
-            });
-
-            lista.appendChild(nuovoLi);
+        sessionStorage.setItem('risultatiRicerca', JSON.stringify(soloTipologia));
+        window.location.href = "/search.html";
         });
-    });
+}
+
+function getRandomInt(min, max) {
+    // Il +1 assicura che anche il valore massimo sia incluso nei risultati
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function sendToRecipePage(ricetta) {
+    sessionStorage.setItem('ricettaSelezionata', JSON.stringify(ricetta));
+    window.location.href = "/ricetta.html";
+}
+
+function loadCards() {
+    let img1 = document.getElementById('img_1');
+    let img2 = document.getElementById('img_2');
+    let img3 = document.getElementById('img_3');
+    let img4 = document.getElementById('img_4');
+    let img5 = document.getElementById('img_5');
+    let img6 = document.getElementById('img_6');
+
+    let title1 = document.getElementById('card_title1');
+    let title2 = document.getElementById('card_title2');
+    let title3 = document.getElementById('card_title3');
+    let title4 = document.getElementById('card_title4');
+    let title5 = document.getElementById('card_title5');
+    let title6 = document.getElementById('card_title6');
+
+    let text1 = document.getElementById('card_text1');
+    let text2 = document.getElementById('card_text2');
+    let text3 = document.getElementById('card_text3');
+    let text4 = document.getElementById('card_text4');
+    let text5 = document.getElementById('card_text5');
+    let text6 = document.getElementById('card_text6');
+
+    let button1 = document.getElementById('card_button1');
+    let button2 = document.getElementById('card_button2');
+    let button3 = document.getElementById('card_button3');
+    let button4 = document.getElementById('card_button4');
+    let button5 = document.getElementById('card_button5');
+    let button6 = document.getElementById('card_button6');
+
+    let ricetta1 = ricettario[getRandomInt(0, ricettario.length - 1)];
+    let ricetta2 = ricettario[getRandomInt(0, ricettario.length - 1)];
+    let ricetta3 = ricettario[getRandomInt(0, ricettario.length - 1)];
+    let ricetta4 = ricettario[getRandomInt(0, ricettario.length - 1)];
+    let ricetta5 = ricettario[getRandomInt(0, ricettario.length - 1)];
+    let ricetta6 = ricettario[getRandomInt(0, ricettario.length - 1)];
+
+    img1.src = ricetta1.urlImmagine;
+    img2.src = ricetta2.urlImmagine;
+    img3.src = ricetta3.urlImmagine;
+    img4.src = ricetta4.urlImmagine;
+    img5.src = ricetta5.urlImmagine;
+    img6.src = ricetta6.urlImmagine;
+
+    title1.textContent = ricetta1.titolo;
+    title2.textContent = ricetta2.titolo;
+    title3.textContent = ricetta3.titolo;
+    title4.textContent = ricetta4.titolo;
+    title5.textContent = ricetta5.titolo;
+    title6.textContent = ricetta6.titolo;
+
+    text1.textContent = ricetta1.storia;
+    text2.textContent = ricetta2.storia;
+    text3.textContent = ricetta3.storia;
+    text4.textContent = ricetta4.storia;
+    text5.textContent = ricetta5.storia;
+    text6.textContent = ricetta6.storia;
+
+    button1.addEventListener('click', function () { sendToRecipePage(ricetta1); });
+    button2.addEventListener('click', function () { sendToRecipePage(ricetta2); });
+    button3.addEventListener('click', function () { sendToRecipePage(ricetta3); });
+    button4.addEventListener('click', function () { sendToRecipePage(ricetta4); });
+    button5.addEventListener('click', function () { sendToRecipePage(ricetta5); });
+    button6.addEventListener('click', function () { sendToRecipePage(ricetta6); });
+
 }
 
 /**
  * @param {string} recipeName
- * @returns {string[]}
+ * @returns {Ricetta[]}
  */
 function searchRecipe(recipeName){
-    /** @type {string[]} */
-    let foundRecipes = [];
-    // const soloTipologia = ricettario.filter(ricetta => ricetta.tipologia === tipologia);
-    foundRecipes.push(ricettario.filter(ricetta => ricetta.titolo.toLowerCase().includes(recipeName.toLowerCase())));
-    return foundRecipes;
+    /** @type {Ricetta[]} */
+    return ricettario.filter(ricetta => ricetta.titolo.toLowerCase().includes(recipeName.toLowerCase()));
 }
 
 function addEventListenerToSearch() {
@@ -179,18 +218,16 @@ function addEventListenerToSearch() {
     });
 }
 
-async function main() {
+async function inizializzaPagina() {
     try {
         ricettario = await loadRicettario();
-        console.log(ricettario);
+        ["primo", "secondo", "contorno", "dolce"].forEach(tipologia => clickOnMenu(tipologia));
+        addEventListenerToSearch();
+        loadCards();
+        console.log("Pagina inizializzata correttamente");
     } catch (error) {
-        console.error('Errore durante il caricamento del ricettario:', error);
+        console.error("Errore durante l'inizializzazione della pagina:", error);
     }
-    clickOnMenu('primo');
-    clickOnMenu('secondo');
-    clickOnMenu('contorno');
-    clickOnMenu('dolce');
-    addEventListenerToSearch();
 }
 
-main();
+document.addEventListener('DOMContentLoaded', inizializzaPagina);

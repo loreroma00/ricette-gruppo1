@@ -1,0 +1,24 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const datiSalvati = sessionStorage.getItem('risultatiRicerca');
+    if (datiSalvati) {
+        const risultatiRicerca = JSON.parse(datiSalvati);
+        const resultsContainer = document.getElementById('searchResults');
+        risultatiRicerca.forEach(ricetta => {
+            const newRow = document.createElement('div');
+            newRow.classList.add('row');
+            // Aggiungi i dettagli della ricetta al newRow
+
+            const title = document.createElement('h3');
+            title.textContent = ricetta.titolo;
+            newRow.appendChild(title);
+
+            const history = document.createElement('p');
+            history.textContent = ricetta.storia;
+            newRow.appendChild(history);
+
+            // Aggiungo al child
+            resultsContainer.appendChild(newRow);
+        });
+    }
+});
+
